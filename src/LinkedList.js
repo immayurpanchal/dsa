@@ -26,7 +26,27 @@ export class LinkedList {
     currentNode.next = node;
   }
 
-  insertRec() {}
+  insertRecursively(index, value, currentNode) {
+    if (index === 0) {
+      const temp = new Node(value);
+      temp.next = currentNode.next;
+      currentNode.next = temp;
+      return temp;
+    }
+
+    this.insertRecursively(index - 1, value, currentNode.next);
+  }
+
+  insertRec(index, value) {
+    if (index === 0) {
+      const node = new Node(value);
+      node.next = this.head;
+      this.head = node;
+      return;
+    }
+
+    this.insertRecursively(index - 1, value, this.head);
+  }
 
   printList() {
     let currentNode = this.head;
