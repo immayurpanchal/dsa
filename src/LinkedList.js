@@ -27,6 +27,13 @@ export class LinkedList {
   }
 
   insertRecursively(index, value, currentNode) {
+    if (index === -1) {
+      const node = new Node(value);
+      node.next = this.head;
+      this.head = node;
+      return;
+    }
+
     if (index === 0) {
       const temp = new Node(value);
       temp.next = currentNode.next;
@@ -38,13 +45,6 @@ export class LinkedList {
   }
 
   insertRec(index, value) {
-    if (index === 0) {
-      const node = new Node(value);
-      node.next = this.head;
-      this.head = node;
-      return;
-    }
-
     this.insertRecursively(index - 1, value, this.head);
   }
 

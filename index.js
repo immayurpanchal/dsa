@@ -6,5 +6,5 @@ ll.add(20);
 ll.add(30);
 ll.add(40);
 ll.printList();
-ll.insertRec(4, 55);
+ll.insertRec(0, 55);
 ll.printList();
