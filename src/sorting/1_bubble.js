@@ -1,12 +1,16 @@
 export function bubbleSort(arr) {
-  // sort the array in place
+  for (let j = 0; j < arr.length - j; j++) {
+    // move the largest value to the end
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > arr[i + 1]) {
+        // swap values
+        let temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+      }
+    }
+  }
 }
 
-// Learning Strategy
-// 1. Learn Value Swapping
-// Write a function that takes two variables and swap the values
-function swap(value1, value2) {
-  console.log(value1, value2);
-}
-
-swap(10, 20);
+// 6,3,4,1,2
+// 3,6,
