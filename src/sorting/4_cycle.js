@@ -7,11 +7,10 @@ function swap(arr, index1, index2) {
 export function cycleSort(arr = []) {
   let i = 0;
   while (i < arr.length) {
-    console.log('i', i);
     if (arr[i] === i + 1) {
       i++;
     } else {
-      const value = arr[i];
+      const value = arr[i] - 1;
       swap(arr, i, value);
     }
   }
