@@ -1,7 +1,7 @@
-import { insertionSort } from './src/sorting/3_insertion';
+import { cycleSort } from './src/sorting/4_cycle';
 console.log('Hello');
 
-const arr = [3, 5, 2, 7, -10, -20, 1];
+const arr = [5, 4, 3, 2, 1];
 console.log('before', arr);
-insertionSort(arr);
+cycleSort(arr);
 console.log('after', arr);
