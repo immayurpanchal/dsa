@@ -1,6 +1,7 @@
-function sum(n) {
-  if (n === 0) return 0;
-  return n + sum(n - 1);
+// 12345 -> 54321
+function reverseNumber(n) {
+  if (n <= 1) return n % 10;
+  return '' + (n % 10) + reverseNumber(parseInt(n / 10));
 }
 
-console.log(sum(5));
+console.log(reverseNumber(12345));
