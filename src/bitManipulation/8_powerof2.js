@@ -20,5 +20,11 @@ function isPowerOf2Recursion(num) {
   return powerOf2RecursionHelper(num, 0) === 1;
 }
 
+// logic n & n-1 === 0 then the num. is power of 2
+function isPowerOf2Second(num) {
+  return (num & (num - 1)) === 0;
+}
+
 console.log(isPowerOf2(8));
 console.log(isPowerOf2Recursion(8));
+console.log(isPowerOf2Second(2));
